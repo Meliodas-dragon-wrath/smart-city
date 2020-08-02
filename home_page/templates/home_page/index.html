@@ -4,9 +4,26 @@
   <head>
     <meta charset="utf-8">
     <title>HOME PAGE</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <h1>Welcome to The_LOCAL_GUIDE</h1>
+
+  <!-- Map section -->
+    <div id='map' style='width: 100%; height: 575px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYW55dXNlcm5hbWUiLCJhIjoiY2tkZGgyaHBxMGM0dTJxbnJsZjJzenAybCJ9.0msTET9V9ZehzJqfK55u3A';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-streets-v11',
+    center: [77.1025,28.7041],
+    zoom: 4.5
+  });
+</script>
+
   </body>
 </html>
